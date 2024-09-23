@@ -1,18 +1,21 @@
 import { html } from '@gracile/gracile/server-html';
+import { createMetadata } from '@gracile/metadata';
 
 export const document = (props: { url: URL; title?: string | null }) => html`
 	<!doctype html>
 	<html lang="en">
 		<head>
+		${createMetadata({
+        siteTitle: 'Evony TKR Tips',
+        pageTitle: `${props.title ?? 'Untitled'}`,
+        ogTitle: props.title ?? 'Untitled',
+        pageDescription: 'The description…',
+        // ...
+      })}
 			<!-- Basics -->
-			<meta charset="utf-8" />
-			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+			
 			<!-- Global assets -->
-			<link
-				rel="stylesheet"
-				href=${new URL('./document.css', import.meta.url).pathname}
-			/>
+			<link rel="stylesheet" href="/src/document.css" />
 			<script
 				type="module"
 				src=${new URL('./document.client.ts', import.meta.url).pathname}

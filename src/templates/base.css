@@ -1,0 +1,11 @@
+@import '@spectrum-css/tokens/dist/index.css';
+@import '@spectrum-css/tokens/dist/css/light-vars';
+@import '@spectrum-css/typography/dist/index.css';
+@import '/node_modules/@spectrum-css/page/dist/index.css';
+@import '/node_modules/@spectrum-css/icon/dist/index.css';
+
+
+body {
+  background-color: var(--spectrum-gray-background-color-default);
+
+}
