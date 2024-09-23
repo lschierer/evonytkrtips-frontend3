@@ -1,13 +1,19 @@
 import { gracile } from '@gracile/gracile/plugin';
 import { defineConfig } from 'vite';
+import { nodeResolve } from '@rollup/plugin-node-resolve';
+import typescript from '@rollup/plugin-typescript';
+
 import { viteMarkdownPlugin } from '@gracile/markdown/vite'; 
 import { MarkdownRenderer } from '@gracile/markdown-preset-marked';
 import { viteSvgPlugin } from '@gracile/svg/vite'; 
 import { viteSitemapPlugin } from '@gracile/sitemap/vite'; 
 import tsconfigPaths from 'vite-tsconfig-paths'
+import path from "path";
+
 
 const SITE_URL = `https://${import.meta.env}.evonytkrtips.net`;
-	
+
+
 export default defineConfig({
 			server: {
 				port: 3030,
@@ -35,14 +41,27 @@ export default defineConfig({
 					},
 				}),
 			],
+      resolve: {
+        alias: {
+          '~/templates/*': path.resolve(__dirname, './src/templates/'),
+          '~/routes/*': path.resolve(__dirname, './src/routes/'),
+          '~/features': path.resolve(__dirname, './src/features/'),
+        }
+      },
 			build: {
+        sourcemap: true,
 				rollupOptions: {
-					input: {
-						SpectrumCSSLight: 'node_modules/@spectrum-css/tokens/dist/css/light-vars.css',
-						SpectrumCSSDark: 'node_modules/@spectrum-css/tokens/dist/css/dark-vars.css',
-						SpectrumWebLight: 'node_modules/@spectrum-web-components/theme/theme-light.js',
-						SpectrumWebDark: 'node_modules/@spectrum-web-components/theme/theme-Dark.js',
-					}
+          input: 'src/index.ts',
+          external: [
+            './dist/server/entrypoint.js',
+          ],
+          plugins: [
+            typescript(),
+            nodeResolve({
+              browser: true,
+              exportConditions: ['node'],
+            })
+          ]
 				}				
 			}
 		}	

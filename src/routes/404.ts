@@ -1,7 +1,7 @@
 import { defineRoute } from '@gracile/gracile/route';
 import { html } from '@gracile/gracile/server-html';
 
-import { document } from '../document.js';
+import { document } from '../document';
 
 export default defineRoute({
 	document: (context) => document({ ...context, title: 'Gracile - 404' }),

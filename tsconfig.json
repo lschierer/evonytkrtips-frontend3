@@ -3,9 +3,16 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@templates/*": ["src/templates/*"],
-      "@routes/*": ["src/routes/*"],
-      "@features/*": ["src/features/*"]
+      "~/*": ["src/*"],
     }
-  }
+  },
+  "include": [
+    "server.ts",
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "**/node_modules",
+    "**/dist",
+    "**/*.js"
+  ]
 }

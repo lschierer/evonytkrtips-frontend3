@@ -48,4 +48,4 @@ export const updateTheme = async (color: Color, scale: Scale = Scale.medium) => 
 
 };
 
-await updateTheme(Color.light, Scale.medium);
+updateTheme(Color.light, Scale.medium);
