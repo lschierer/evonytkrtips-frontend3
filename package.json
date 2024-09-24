@@ -6,7 +6,7 @@
     "dev": "vite",
     "check": "tsc",
     "build": "vite build",
-    "preview": "onchange -i '**/*.ts' -- tsx server.ts",
+    "preview": "onchange -i '**/*.ts' -- node -C preview --watch server.js",
     "start": "node server.js"
   },
   "dependencies": {
@@ -50,8 +50,7 @@
     "rollup-plugin-node-polyfills": "^0.2.1",
     "tsx": "^4.19.1",
     "typescript": "^5.6.2",
-    "vite-plugin-node-polyfills": "^0.22.0",
-    "vite-plugin-node-stdlib-browser": "^0.2.1"
+    "vite-plugin-node-polyfills": "^0.22.0"
   },
   "postcss": {
     "plugins": {
