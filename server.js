@@ -6,7 +6,8 @@ import * as gracile from '@gracile/gracile/hono';
 
 import { handler } from './dist/server/entrypoint.js';
 
-const app = new Hono<{ Variables: Gracile.Locals }>();
+/** @type {Hono<{ Variables: Gracile.Locals }>} */
+const app = new Hono();
 
 app.get('*', serveStatic({ root: gracile.getClientDistPath(import.meta.url) }));
 
