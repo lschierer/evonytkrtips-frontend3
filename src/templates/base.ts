@@ -6,7 +6,7 @@ import { createMetadata } from '@gracile/metadata';
 const baseCSSUrl = new URL('./base.css', import.meta.url); 
 export const document = (props: { url: URL; title?: string }) => html`
   <!doctype html>
-  <html lang="en" >
+  <html lang="en" dir="ltr" class="spectrum spectrum--medium spectrum--light">
     <head>
       <!-- SEO -->
       ${createMetadata({
@@ -25,9 +25,11 @@ export const document = (props: { url: URL; title?: string }) => html`
       
     </head>
 
-    <body class="spectrum spectrum--medium spectrum--light" >
-      <p>test</p>
+    <body class="h-screen bg-spectrum " >
+      <sp-theme >  
+      <p class="" >test</p>
       <route-template-outlet></route-template-outlet>
+    
     </body>
   </html>
 `;

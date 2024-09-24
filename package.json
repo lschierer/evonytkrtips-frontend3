@@ -6,7 +6,7 @@
     "dev": "vite",
     "check": "tsc",
     "build": "vite build",
-    "preview": "onchange -i '**/*.ts' -- node -C preview --watch server.js",
+    "preview": "node -C preview --watch server.js",
     "start": "node server.js"
   },
   "dependencies": {
@@ -48,6 +48,8 @@
     "postcss-utilities": "^0.8.4",
     "resolve-tspaths": "^0.8.22",
     "rollup-plugin-node-polyfills": "^0.2.1",
+    "sass": "^1.79.3",
+    "tailwindcss": "^3.4.12",
     "tsx": "^4.19.1",
     "typescript": "^5.6.2",
     "vite-plugin-node-polyfills": "^0.22.0"
@@ -57,6 +59,7 @@
       "postcss-plugin": {},
       "postcss-import": {},
       "postcss-url": {},
+      "tailwindcss": {},
       "autoprefixer": {}
     }
   }
