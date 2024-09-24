@@ -25,11 +25,8 @@ export const document = (props: { url: URL; title?: string }) => html`
       
     </head>
 
-    <body class="h-screen bg-spectrum " >
-      <sp-theme >  
-      <p class="" >test</p>
+    <body class="h-full bg-spectrum " >
       <route-template-outlet></route-template-outlet>
-    
     </body>
   </html>
 `;

@@ -1,4 +1,4 @@
-import '../features/my-greetings';
+import '../components/my-greetings';
 
 import { defineRoute } from '@gracile/gracile/route';
 import { html } from '@gracile/gracile/server-html';

@@ -1,4 +1,5 @@
 import globalTailwind from '~/styles/tailwind.global.css?inline';
+import '@gracile/gracile/hydration';
 
 enum Color {
   light,
