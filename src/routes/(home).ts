@@ -6,15 +6,6 @@ import { html } from '@gracile/gracile/server-html';
 import { document } from '../document.js';
 
 export default defineRoute({
-	handler: {
-		GET: ({ url, locals }) => {
-			return {
-				...locals,
-				query: url.searchParams.get('filter') || '…empty…',
-			};
-		},
-	},
-
 	document: (context) => document({ ...context, title: 'Gracile - Home' }),
 
 	template: (context) => html`
@@ -28,28 +19,22 @@ export default defineRoute({
 				<a href="https://gracile.js.org" target="_blank">Documentation</a>
 			</dd>
 
-			<dt>Query (<code>?filter</code>):</dt>
-			<dd>
-				<code>${context.props.GET.query}</code>
-			</dd>
-
-			<dt>User email:</dt>
-			<dd>
-				<code>${context.props.GET.userEmail}</code>
-			</dd>
-
-			<dt>Request ID:</dt>
-			<dd>
-				<code>${context.props.GET.requestId}</code>
-			</dd>
-
-			<dt>JSON API</dt>
-			<dd><a href="/api/">GET</a></dd>
-
 			<dt>Custom Element</dt>
 			<dd><my-greetings></my-greetings></dd>
 
-			<dt>Prerendered page</dt>
+			<dt>Demos</dt>
+			<dd>
+				<ul>
+					<li>
+						<a href="/tailwind-demo/">Tailwind</a>
+					</li>
+					<li>
+						<a href="/bootstrap-demo/">Bootstrap</a>
+					</li>
+				</ul>
+			</dd>
+
+			<dt>Dummy page</dt>
 			<dd><a href="/about/">About page</a></dd>
 		</dl>
 	`,

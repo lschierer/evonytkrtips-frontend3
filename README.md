@@ -1,16 +1,16 @@
-# Gracile Starter Project: Minimal server (hono)
+# Gracile Starter Project: Minimal setup (Bootstrap/Tailwind)
 
-A Gracile handler, already set up with Hono and static file serving.
+A project with popular vendors CSS preconfigured.
 
 ```sh
-npm create gracile@latest -t minimal-server-hono
+npm create gracile@latest -t minimal-bootstrap-tailwind
 ```
 
 <div align="center">
 
-[![Edit in CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/gracile-web/starter-projects/tree/main/templates/minimal-server-hono?embed=1)
+[![Edit in CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/gracile-web/starter-projects/tree/main/templates/minimal-bootstrap-tailwind?embed=1)
 &nbsp;&nbsp;&nbsp;&nbsp;
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/gracile-web/starter-projects/tree/main/templates/minimal-server-hono)
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/gracile-web/starter-projects/tree/main/templates/minimal-bootstrap-tailwind)
 
 </div>
 
@@ -25,24 +25,36 @@ npm create gracile@latest -t minimal-server-hono
 ```text
 ├─ ⬛️ README.md
 ├─ 🟠 package.json
+├─ 🟨 postcss.config.js
 ├─ 📂 public/
 │   └─ 🔶 favicon.svg
-├─ 🟨 server.js
 ├─ 📂 src/
 │   ├─ 🟦 ambient.d.ts
+│   ├─ 📂 content/
+│   │   └─ 🟦 tailwind-demo.ts
 │   ├─ 🟦 document.client.ts
 │   ├─ 🔷 document.css
 │   ├─ 🟦 document.ts
 │   ├─ 📂 features/
+│   │   ├─ 🟦 my-greetings-bootstrap.ts
+│   │   ├─ 🟦 my-greetings-tailwind.ts
 │   │   └─ 🟦 my-greetings.ts
-│   └─ 📂 routes/
-│       ├─ 🟦 (home).client.ts
-│       ├─ 🔷 (home).css
-│       ├─ 🟦 (home).ts
-│       ├─ 🟦 404.ts
-│       ├─ 🟦 about.ts
-│       └─ 📂 api/
-│           └─ 🟦 [...path].ts
+│   ├─ 📂 routes/
+│   │   ├─ 🟦 (home).client.ts
+│   │   ├─ 🔷 (home).css
+│   │   ├─ 🟦 (home).ts
+│   │   ├─ 🟦 404.ts
+│   │   ├─ 🟦 about.ts
+│   │   ├─ 📂 bootstrap-demo/
+│   │   │   ├─ 🟦 (index).client.ts
+│   │   │   ├─ 🔷 (index).css
+│   │   │   └─ 🟦 (index).ts
+│   │   └─ 📂 tailwind-demo/
+│   │       ├─ 🟦 (index).client.ts
+│   │       ├─ 🔷 (index).css
+│   │       └─ 🟦 (index).ts
+│   └─ 🔷 tailwind.css
+├─ 🟨 tailwind.config.js
 ├─ 🟠 tsconfig.json
 └─ 🟦 vite.config.ts
 ```

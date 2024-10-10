@@ -23,16 +23,7 @@ export default defineConfig({
   },
 	plugins: [
 		gracile({
-			output: 'server',
-
-			dev: {
-				locals: (_context) => {
-					return {
-						requestId: crypto.randomUUID(),
-						userEmail: 'admin@admin.home.arpa',
-					};
-				},
-			},
+			output: 'static',
 		}),
 	],
 });
