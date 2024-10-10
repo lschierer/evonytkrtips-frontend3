@@ -3,18 +3,22 @@
   "type": "module",
   "version": "0.0.2",
   "scripts": {
-    "dev": "vite",
-    "check": "tsc",
-    "build": "vite build",
-    "preview": "node -C preview --watch server.js",
-    "start": "node server.js"
+    "dev": "pnpm vite",
+    "check": "pnpm tsc",
+    "build": "pnpm vite build",
+    "preview": "pnpm node -C preview --watch server.js",
+    "start": "pnpm node server.js"
   },
   "dependencies": {
     "@gracile/gracile": "^0.7.1",
-    "lit": "^3.2.1",
-    "vite": "^5.4.8",
+    "@gracile/markdown": "^0.2.0",
+    "@gracile/metadata": "^0.1.0",
+    "@gracile/svg": "^0.1.0",
+    "@hono/node-server": "^1.13.1",
     "hono": "^4.6.3",
-    "@hono/node-server": "^1.13.1"
+    "lit": "^3.2.1",
+    "package.json": "^2.0.1",
+    "vite": "^5.4.8"
   },
   "devDependencies": {
     "@types/node": "^22.7.5",
