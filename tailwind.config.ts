@@ -5,7 +5,10 @@ export default {
   corePlugins: {
     preflight: false,
   },
-  content: [],
+  content: [
+    'src/**/*.ts',
+    'src/**/*.html'
+  ],
   presets: [],
   darkMode: 'selector', 
   theme: {

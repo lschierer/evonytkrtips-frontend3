@@ -15,10 +15,7 @@ export const document = (props: { url: URL; title?: string | null }) => html`
 			<!-- Basics -->
 			
 			<!-- Global assets -->
-			<link 
-				rel="stylesheet" 
-				href=${new URL('./document.css', import.meta.url).pathname}
-			/>
+			<link rel="stylesheet" href="/src/document.css" />
 			<script
 				type="module"
 				src=${new URL('./document.client.ts', import.meta.url).pathname}
@@ -30,7 +27,6 @@ export const document = (props: { url: URL; title?: string | null }) => html`
 		</head>
 
 		<body>
-			
 			<route-template-outlet></route-template-outlet>
 		</body>
 	</html>

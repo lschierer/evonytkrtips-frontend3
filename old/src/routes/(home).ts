@@ -23,7 +23,10 @@ export default defineRoute({
 		<h2>${context.url}</h2>
 
 		<dl>
-			
+			<dt>Gracile</dt>
+			<dd>
+				<a href="https://gracile.js.org" target="_blank">Documentation</a>
+			</dd>
 
 			<dt>Query (<code>?filter</code>):</dt>
 			<dd>

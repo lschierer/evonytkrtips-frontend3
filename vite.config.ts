@@ -1,27 +1,26 @@
 import { gracile } from '@gracile/gracile/plugin';
 import { defineConfig } from 'vite';
-import typescript from '@rollup/plugin-typescript';
 
 import { viteMarkdownPlugin } from '@gracile/markdown/vite';
 import { MarkdownRenderer } from '@gracile/markdown-preset-marked';
 import { viteSvgPlugin } from '@gracile/svg/vite';
-import { viteSitemapPlugin } from '@gracile/sitemap/vite';
 import tsconfigPaths from 'vite-tsconfig-paths'
 import path from "path";
 
+import build from '@hono/vite-build/bun';
 
-const SITE_URL = `https://${import.meta.env}.evonytkrtips.net`;
+const SITE_URL = import.meta.env !== undefined ? `https://${import.meta.env.MODE}.evonytkrtips.net` : 'http://localhost:3030';
 
-
-export default defineConfig({
+const viteConfig = defineConfig({
   server: {
     port: 3030,
   },
   plugins: [
-    tsconfigPaths(),
-    viteSitemapPlugin({
-      siteUrl: SITE_URL,
+    build({
+      entry: './src/index.ts',
+      outputDir: './dist',
     }),
+    tsconfigPaths(),
     viteMarkdownPlugin({ MarkdownRenderer }),
     viteSvgPlugin({
       //SVGO options
@@ -49,13 +48,7 @@ export default defineConfig({
   },
   build: {
     sourcemap: true,
-    rollupOptions: {
-      plugins: [
-        typescript(),
-
-      ]
-    }
   }
-}
+});
 
-);
+export default viteConfig;

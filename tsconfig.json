@@ -1,25 +1,44 @@
 {
   "extends": "@gracile/gracile/tsconfigs/strict",
   "compilerOptions": {
-    "target": "ES2022",
-    "moduleResolution": "Bundler",
+    "baseUrl": "src",
     "esModuleInterop": true,
+    "exactOptionalPropertyTypes": true,
+    "isolatedModules": true,
+    "lib": [
+      "ES2020",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "module": "ESNext",
+    "moduleDetection": "force",
+    "moduleResolution": "bundler",
+    "noEmit": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "paths": {
+      "~/*": [
+        "src/*"
+      ]
+    },
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "ES2022",
     "types": [
+      "bun-types",
       "node",
       "vitest/globals"
     ],
-    "baseUrl": ".",
-    "paths": {
-      "~/*": ["src/*"],
-    }
+    "useDefineForClassFields": true
   },
-  "include": [
-    "server.ts",
-    "src/**/*.ts"
-, "index.ts"  ],
   "exclude": [
     "**/node_modules",
     "**/dist",
-    "**/*.js"
+  ],
+  "include": [
+    "vite.config.ts",
+    "tailwind.config.ts",
+    "src/**/*.ts"
   ]
 }
