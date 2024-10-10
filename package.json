@@ -6,7 +6,7 @@
     "dev": "pnpm vite",
     "check": "pnpm tsc",
     "build": "pnpm vite build",
-    "preview": "pnpm node -C preview --watch server.js",
+    "preview": "pnpm tsx -C preview --watch server.ts",
     "start": "pnpm node server.js"
   },
   "dependencies": {
