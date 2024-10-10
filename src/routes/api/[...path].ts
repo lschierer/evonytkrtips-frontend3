@@ -1,6 +1,5 @@
 import { defineRoute } from '@gracile/gracile/route';
 
-
 export default defineRoute({
 	handler: {
 		GET: ({ url }) => {
@@ -11,4 +10,3 @@ export default defineRoute({
 		},
 	},
 });
-

@@ -1,9 +1,9 @@
-import '../components/my-greetings';
+import '../features/my-greetings.js';
 
 import { defineRoute } from '@gracile/gracile/route';
 import { html } from '@gracile/gracile/server-html';
 
-import { document } from '../document';
+import { document } from '../document.js';
 
 export default defineRoute({
 	handler: {
@@ -23,7 +23,10 @@ export default defineRoute({
 		<h2>${context.url}</h2>
 
 		<dl>
-			
+			<dt>Gracile</dt>
+			<dd>
+				<a href="https://gracile.js.org" target="_blank">Documentation</a>
+			</dd>
 
 			<dt>Query (<code>?filter</code>):</dt>
 			<dd>
