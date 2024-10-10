@@ -1,5 +1,5 @@
 {
-  "name": "@gracile/template--minimal-server-hono",
+  "name": "@evonytkrtips/frontend",
   "type": "module",
   "version": "0.0.2",
   "scripts": {
@@ -15,13 +15,29 @@
     "@gracile/metadata": "^0.1.0",
     "@gracile/svg": "^0.1.0",
     "@hono/node-server": "^1.13.1",
+    "@spectrum-css/card": "^9.1.1",
+    "@spectrum-css/icon": "^7.1.4",
+    "@spectrum-css/page": "^8.1.3",
+    "@spectrum-css/tokens": "^14.3.1",
+    "@spectrum-css/typography": "^6.1.3",
     "hono": "^4.6.3",
     "lit": "^3.2.1",
     "package.json": "^2.0.1",
     "vite": "^5.4.8"
   },
   "devDependencies": {
+    "@rollup/plugin-babel": "^6.0.4",
+    "@tailwindcss/typography": "^0.5.15",
     "@types/node": "^22.7.5",
+    "autoprefixer": "^10.4.20",
+    "jiti": "^1.21.6",
+    "postcss": "^8.4.47",
+    "postcss-import": "^16.1.0",
+    "postcss-load-config": "^6.0.1",
+    "postcss-nested": "^6.2.0",
+    "rollup-plugin-postcss": "^4.0.2",
+    "tailwindcss": "^3.4.12",
+    "tsx": "^4.19.1",
     "typescript": "^5.6.3"
   }
 }
